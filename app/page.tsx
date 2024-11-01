@@ -1,9 +1,8 @@
-// app/page.tsx
-
 'use client';
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -25,6 +24,16 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         className="stroke-zinc-400"
       />
     </svg>
+  );
+}
+
+function Pin(props: JSX.IntrinsicAttributes & React.AnchorHTMLAttributes<HTMLAnchorElement>) {
+  return (
+    <a
+      {...props}
+      target="_blank"
+      className="mr-0.5 ml-0.5 inline-flex items-center border px-2 py-1 text-sm leading-4 no-underline text-zinc-200 border-1 border-white/20 backdrop-blur-xl bg-white/20 rounded-lg"
+    />
   );
 }
 
@@ -82,27 +91,54 @@ export default function Component() {
         transition={{ duration: 1 }}
         className="text-center"
       >
-        <div className="shadow-lg font-semibold mb-4 inline-flex rounded-xl px-4 py-1 md:py-2 text-xs md:text-sm leading-6 text-zinc-400 ring-1 ring-white/20 hover:ring-white/30 backdrop-blur-xl bg-white/10 transition-all">
-          Ideal for SaaS waitlists & content creator newsletters.
+        <div className="shadow-lg font-semibold mb-8 md:mb-10 inline-flex rounded-xl px-4 py-1 md:py-2 text-xs md:text-sm leading-6 text-zinc-400 ring-1 ring-white/20 hover:ring-white/30 backdrop-blur-xl bg-white/10 transition-all">
+          {`Effortless waitlists & standout newsletters`}
         </div>
-        <h1 className="text-balance text-5xl leading-[3.4rem] md:text-7xl md:leading-[5rem] font-bold tracking-tighter max-w-4xl mx-auto bg-gradient-to-r from-zinc-900 to-white to-45% bg-clip-text text-transparent">
-          Next.js Newsletter Landing Page
+        <h1 className="text-balance text-6xl leading-[3.4rem] md:text-8xl md:leading-[5rem] font-bold tracking-tighter max-w-4xl mx-auto bg-gradient-to-r from-zinc-900 to-white to-45% bg-clip-text text-transparent">
+          {`NextKit Form`}
         </h1>
-        <p className="mt-4 text-lg text-zinc-400">
-          A simple Next.js newsletter landing page with several built-in API options.
+        <p className="max-w-3xl mx-auto mt-6 text-base md:text-lg text-zinc-300">
+          A simple {' '}
+          <Pin href="https://nextjs.org">
+            <Image
+              alt="Next.js logomark"
+              src="/next-logo.svg"
+              className="!mr-1"
+              width="14"
+              height="14"
+            />
+            Next.js
+          </Pin>
+          {' '}
+          template for waitlist or newsletter 
+          sign-ups, integrated with the {' '}
+          <Pin href="https://kit.com/">
+            <Image
+              alt="Kit logomark"
+              src="/kit-logo.svg"
+              className="!mr-1"
+              width="24"
+              height="24"
+            />
+            API
+          </Pin>
+          {' '}
+          (formerly ConvertKit). 
+          Features Headless UI for customization and Framer Motion for 
+          smooth animations—ideal for capturing emails with style and ease.
         </p>
       </motion.div>
 
       {/* Main Content */}
-      <div className="max-w-3xl mx-auto relative mt-10 pb-12">
+      <div className="max-w-3xl mx-auto relative mt-8 pb-12">
         <div className="relative">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="ring-1 ring-white/30 backdrop-blur-xl bg-white/10 rounded-3xl p-8 md:p-14 shadow-xl"
+            className="ring-1 ring-white/30 backdrop-blur-xl bg-white/10 rounded-3xl px-6 py-8 md:p-12 shadow-xl"
           >
-            <div className="space-y-4">
+            <div className="space-y-6">
               <div className="space-y-4">
                 <div className="flex">
                   <MailIcon className="bg-white/5 rounded-lg p-1 h-9 w-9 flex-none items-center justify-center" />
@@ -141,7 +177,7 @@ export default function Component() {
                 <button
                   type="submit"
                   disabled={status === 'loading'}
-                  className="w-full px-4 py-2 rounded-lg bg-white text-black hover:bg-white/90 transition-colors font-medium"
+                  className="w-full px-4 py-2 rounded-lg bg-zinc-200 text-black hover:bg-white transition-all font-medium"
                 >
                   {status === 'loading' ? 'Joining...' : 'Join Waitlist'}
                 </button>
