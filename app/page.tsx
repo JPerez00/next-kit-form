@@ -50,7 +50,7 @@ export default function Component() {
     setStatus('loading');
 
     try {
-      const res = await fetch('/api/convertkit', {
+      const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
