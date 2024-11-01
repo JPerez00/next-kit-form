@@ -153,7 +153,7 @@ export default function Component() {
                   animate={{ opacity: 1, y: 0 }}
                   className="text-center text-sm text-lime-300/70"
                 >
-                  Thank you for joining. We'll be in touch soon.
+                  {`Thank you for joining. We'll be in touch soon.`}
                 </motion.p>
               )}
 
