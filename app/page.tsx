@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -83,7 +84,7 @@ export default function Component() {
   };
 
   return (
-    <div className="pt-16">
+    <div className="pt-12">
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -91,11 +92,11 @@ export default function Component() {
         transition={{ duration: 1 }}
         className="text-center"
       >
-        <div className="shadow-lg font-semibold mb-8 md:mb-10 inline-flex rounded-xl px-4 py-1 md:py-2 text-xs md:text-sm leading-6 text-zinc-400 ring-1 ring-white/20 hover:ring-white/30 backdrop-blur-xl bg-white/10 transition-all">
+        <div className="shadow-lg font-semibold mb-6 md:mb-8 inline-flex rounded-xl px-4 py-1 md:py-2 text-xs md:text-sm leading-6 text-zinc-400 ring-1 ring-white/20 hover:ring-white/30 backdrop-blur-xl bg-white/10 transition-all">
           {`Effortless waitlists & standout newsletters`}
         </div>
         <h1 className="text-balance text-6xl leading-[3.4rem] md:text-8xl md:leading-[5rem] font-bold tracking-tighter max-w-4xl mx-auto bg-gradient-to-r from-zinc-900 to-white to-45% bg-clip-text text-transparent">
-          {`NextKit Form`}
+          NextKit Form
         </h1>
         <p className="max-w-3xl mx-auto mt-6 text-base md:text-lg text-zinc-300">
           A simple {' '}
@@ -127,10 +128,37 @@ export default function Component() {
           Features Headless UI for customization and Framer Motion for 
           smooth animations—ideal for capturing emails with style and ease.
         </p>
+        <div className="mt-4 flex gap-4 flex-row items-center justify-center">
+          <Link
+            href="https://www.jorge-perez.dev/blog/nextkit-form-template"
+            className="inline-flex shadow-lg font-semibold rounded-2xl text-sm md:text-base px-8 py-3 leading-6 text-zinc-100 ring-1 ring-white/30 hover:ring-white/40 backdrop-blur-xl bg-white/15 transition-all"
+          >
+            Read The Docs
+          </Link>
+          <Link
+            href="https://github.com/JPerez00/next-kit-form"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center shadow-lg font-semibold rounded-2xl text-sm md:text-base px-8 py-3 leading-6 text-zinc-100 ring-1 ring-white/30 hover:ring-white/40 backdrop-blur-xl bg-white/15 transition-all"
+          >
+            {/* GitHub Icon */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              className="mr-2"
+            >
+               <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+            </svg>
+            GitHub Repo
+          </Link>
+        </div>
       </motion.div>
 
       {/* Main Content */}
-      <div className="max-w-3xl mx-auto relative mt-8 pb-12">
+      <div className="max-w-3xl mx-auto relative mt-6 pb-12">
         <div className="relative">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
