@@ -84,7 +84,7 @@ export default function Component() {
   };
 
   return (
-    <div className="pt-12">
+    <div className="pb-20 pt-20 lg:pt-32">
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -92,13 +92,13 @@ export default function Component() {
         transition={{ duration: 1 }}
         className="text-center"
       >
-        <div className="shadow-lg font-semibold mb-6 md:mb-8 inline-flex rounded-xl px-4 py-1 md:py-2 text-xs md:text-sm leading-6 text-zinc-400 ring-1 ring-white/20 hover:ring-white/30 backdrop-blur-xl bg-white/10 transition-all">
+        <div className="shadow-lg font-semibold mb-10 md:mb-12 inline-flex rounded-2xl px-4 py-1 md:py-2 text-xs md:text-base leading-6 text-zinc-400 ring-1 ring-white/20 hover:ring-white/30 backdrop-blur-xl bg-white/10 transition-all">
           {`Effortless waitlists & standout newsletters`}
         </div>
-        <h1 className="text-balance text-6xl leading-[3.4rem] md:text-8xl md:leading-[5rem] font-bold tracking-tighter max-w-4xl mx-auto bg-gradient-to-r from-zinc-900 to-white to-45% bg-clip-text text-transparent">
+        <h1 className="text-balance text-6xl leading-[3.4rem] md:text-8xl md:leading-[5rem] font-bold tracking-tight max-w-4xl mx-auto bg-gradient-to-r from-zinc-900 to-white to-45% bg-clip-text text-transparent font-effect-hero">
           NextKit Form
         </h1>
-        <p className="max-w-3xl mx-auto mt-6 text-base md:text-lg text-zinc-300">
+        <p className="max-w-3xl mx-auto mt-10 text-base md:text-xl leading-7 md:leading-[2.2rem] text-zinc-300">
           A simple {' '}
           <Pin href="https://nextjs.org">
             <Image
@@ -128,10 +128,10 @@ export default function Component() {
           Features Headless UI for customization and Framer Motion for 
           smooth animations—ideal for capturing emails with style and ease.
         </p>
-        <div className="mt-4 flex gap-4 flex-row items-center justify-center">
+        <div className="mt-6 flex gap-6 flex-row items-center justify-center">
           <Link
             href="https://www.jorge-perez.dev/blog/nextkit-form-template"
-            className="inline-flex shadow-lg font-semibold rounded-2xl text-sm md:text-base px-8 py-3 leading-6 text-zinc-100 ring-1 ring-white/30 hover:ring-white/40 backdrop-blur-xl bg-white/15 transition-all"
+            className="inline-flex shadow-lg font-semibold rounded-2xl text-sm md:text-base px-6 md:px-8 py-3 md:py-4 leading-6 text-zinc-100 ring-1 ring-white/30 hover:ring-white/40 backdrop-blur-xl bg-white/15 transition-all"
           >
             Read The Docs
           </Link>
@@ -139,7 +139,7 @@ export default function Component() {
             href="https://github.com/JPerez00/next-kit-form"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center shadow-lg font-semibold rounded-2xl text-sm md:text-base px-8 py-3 leading-6 text-zinc-100 ring-1 ring-white/30 hover:ring-white/40 backdrop-blur-xl bg-white/15 transition-all"
+            className="inline-flex items-center justify-center shadow-lg font-semibold rounded-2xl text-sm md:text-base px-6 md:px-8 py-3 md:py-4 leading-6 text-zinc-100 ring-1 ring-white/30 hover:ring-white/40 backdrop-blur-xl bg-white/15 transition-all"
           >
             {/* GitHub Icon */}
             <svg
@@ -155,10 +155,12 @@ export default function Component() {
             GitHub Repo
           </Link>
         </div>
+        <hr className="max-w-3xl mx-auto my-8 border-white/15" />
       </motion.div>
+      
 
       {/* Main Content */}
-      <div className="max-w-3xl mx-auto relative mt-6 pb-12">
+      <div className="max-w-3xl mx-auto relative mt-8 pb-12">
         <div className="relative">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -169,7 +171,7 @@ export default function Component() {
             <div className="space-y-6">
               <div className="space-y-4">
                 <div className="flex">
-                  <MailIcon className="bg-white/5 rounded-lg p-1 h-9 w-9 flex-none items-center justify-center" />
+                  <MailIcon className="bg-white/10 ring-1 ring-white/30 rounded-lg p-1.5 h-9 w-9 flex-none items-center justify-center shadow-md" />
                   <h2 className="ml-3 text-4xl font-bold tracking-tight">
                     Experience it first here...
                   </h2>

@@ -32,7 +32,7 @@ export default function RootLayout({
     suppressHydrationWarning
     >
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased mx-4 mt-6 lg:mx-auto min-h-screen relative bg-black text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased mx-4 lg:mx-auto min-h-screen relative bg-black text-white`}
       >
         {/* Background Gradient */}
         <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-600 via-purple-600 to-orange-600 opacity-30 blur-3xl" />
